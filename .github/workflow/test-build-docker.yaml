@@ -1,7 +1,8 @@
 name: Download artifact
 on:
   push:
-    branches: [ 'testci' ]
+    branches:
+      - testci
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
