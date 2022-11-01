@@ -7,10 +7,10 @@ jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2      
       - name: wget
         uses: wei/wget@v1
         with:
           args: -O ROOT.war 'https://github-registry-files.githubusercontent.com/559819510/36bbd300-592e-11ed-9894-1007e37b5fa5?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221101%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221101T031718Z&X-Amz-Expires=300&X-Amz-Signature=4001d45dd633f27e2d68e9ffaa8cac7ff643afd00a681f7ea004e57e9bbe0202&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=559819510&response-content-disposition=filename%3Dgetting-started-tomcat-1.0-20221031.071050-1.war&response-content-type=application%2Foctet-stream'
-      - uses: actions/checkout@v2
       - name: Display structure of downloaded files
         run: ls -R
